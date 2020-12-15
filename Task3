@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+namespace MyApp
+{
+/*
+Write a program in C# Sharp to read 10 numbers from keyboard and find their sum and average.
+Test Data:Input the 10 numbers: 
+Number-1:2 ... 
+Number-10:2 
+Expected Output:The sum of 10 no is: 51 The Average is: 5.100000
+*/
+   class Program
+    {
+        static void Main(string[] args)
+        {
+        //int[] numbers = new int[10];
+        double numbers = 0;
+        for ( int i = 0; i < 10 ; i++)   
+            {
+                Console.WriteLine("Number-" + i + ": ");
+                numbers = numbers + double.Parse(Console.ReadLine());
+            }
+        Console.WriteLine ( "The sum of 10 no is: " + numbers);
+        double averageNumber = numbers / 10; 
+        Console.WriteLine ( "The Average is: " + averageNumber);
+
+        }
+    }
+}
