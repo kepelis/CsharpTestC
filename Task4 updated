@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+
+namespace MyApp
+{
+    class Person
+    {
+        private int _age;
+        public void Greet()
+        {
+            Console.WriteLine (" Hello! ");
+        }
+        public void SetAge(int age)
+        {
+            _age = age ;
+        }
+        public int AgeIs ()
+        {
+            return _age ;
+        }
+    }
+
+    class Student : Person 
+    {
+        public void Study()
+        {
+            Console.WriteLine("I'm studying");
+        }
+        public void ShowAge ()
+        {
+            Console.WriteLine("My age is: " + AgeIs() + " years old");
+        }
+    }
+
+    class Professor : Person 
+    {
+        public void Explain()
+        {
+            Console.WriteLine("I'm explaining");
+        }
+    }
+
+
+   class Program
+    {
+        static void Main(string[] args)
+        {
+       
+            var person = new Person();
+            person.Greet();
+
+            var student = new Student();
+            student.SetAge(30);
+            student.Greet();
+            student.ShowAge();
+            student.Study();
+
+            var professor = new Professor();
+            professor.SetAge (75);
+            professor.Greet();
+            professor.Explain();
+        }
+    }
+}
